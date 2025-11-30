@@ -136,29 +136,81 @@ export default function Home() {
         )}
       </nav>
 
-      {/* HERO SECTION */}
-      <div className="relative bg-orange-50 min-h-screen flex items-center pt-20">
+{/* --- HERO SECTION (Updated with Simplified Content) --- */}
+      <div className="relative bg-orange-50 min-h-screen flex items-center pt-24 pb-12">
         <div className="max-w-7xl mx-auto w-full px-4">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
-            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl font-[family-name:var(--font-sk)]">
-                <span className="block">మన ఊరి అభివృద్ధి కోసం</span>
-                <span className="block text-orange-600 mt-2">పునాది బలంగా వేసుకుందాం</span>
+            
+            {/* TEXT SIDE */}
+            <div className="sm:text-center md:max-w-3xl md:mx-auto lg:col-span-7 lg:text-left">
+              {/* Badge */}
+              <div className="inline-flex items-center px-3 py-1 rounded-full border border-orange-200 bg-orange-100 text-orange-800 text-sm font-medium mb-4">
+                 <span>✊ మార్పు మనతోనే మొదలవ్వాలి</span>
+              </div>
+
+              {/* Main Headline */}
+              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl font-[family-name:var(--font-sk)] leading-tight">
+                మన ఊరి అభివృద్ధి కోసం
+<br/>
+                <span className="text-orange-600">పునాది బలంగా వేసుకుందాం !</span>
               </h1>
-              <p className="mt-6 text-base text-gray-500 sm:mt-5 sm:text-lg md:mt-5 md:text-xl">
-                పుట్టిన చోటుతో పోలిస్తే పనిచేసిన చోటు ముఖ్యం. సమస్య వినిపిస్తే అదే చోట పరిష్కారం. 
-                మీ ఆశీర్వాదం నా బలం.
+
+              {/* Sub-text (Local Connect) */}
+              <p className="mt-4 text-lg text-gray-600 font-medium">
+                "నా చిన్నతనం నుండి పెరిగింది, నా జీవితం గడిచింది అంతా ఈ మాదన్నపేటలోనే. ఉండేది ఇక్కడే.. ఎప్పటికీ మీతోనే! <br/>
+                మీలో ఒకడిగా, ఇక్కడి సమస్యలపై పూర్తి అవగాహనతో మీ ముందుకు వస్తున్నా."
               </p>
+
+              {/* Key Highlights (Bullet Points) */}
+              <div className="mt-6 bg-white p-4 rounded-xl shadow-sm border border-orange-100">
+                <ul className="space-y-3 text-left">
+                    <li className="flex items-start">
+                        <span className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-500 text-white flex items-center justify-center text-xs mr-3 mt-0.5">🛕</span>
+                        <span className="text-gray-800 font-bold">తక్షణ కర్తవ్యం: <span className="font-normal text-gray-600">గ్రామ దేవతల పునఃప్రతిష్టాపన - బొడ్డు రాయి ఉత్సవం.</span></span>
+                    </li>
+                    <li className="flex items-start">
+                        <span className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs mr-3 mt-0.5">💧</span>
+                        <span className="text-gray-800 font-bold">సమస్యల పరిష్కారం: <span className="font-normal text-gray-600">నీరు, డ్రైనేజీ, లైటింగ్ సమస్యలకు యుద్ధ ప్రాతిపదికన పరిష్కారం.</span></span>
+                    </li>
+                    <li className="flex items-start">
+                        <span className="flex-shrink-0 h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs mr-3 mt-0.5">🤝</span>
+                        <span className="text-gray-800 font-bold">యువతకు భరోసా: <span className="font-normal text-gray-600">ఉద్యోగ & క్రీడా రంగాల్లో గైడెన్స్.</span></span>
+                    </li>
+                </ul>
+              </div>
+
+              {/* CTA Buttons */}
               <div className="mt-8 flex gap-4 justify-center lg:justify-start">
-                <Link href="/manifesto" className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg">
-                  మేనిఫెస్టో చూడండి
+                <Link href="/manifesto" className="px-8 py-3 border border-transparent text-base font-bold rounded-md text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                  నా పూర్తి మేనిఫెస్టో చూడండి
+                </Link>
+                <Link href="#contact" className="px-8 py-3 border border-gray-300 text-base font-bold rounded-md text-gray-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg shadow-sm">
+                  మద్దతు తెలపండి
                 </Link>
               </div>
             </div>
-            <div className="mt-12 lg:mt-0 lg:col-span-6 flex justify-center">
-              <div className="relative h-80 w-80 md:h-96 md:w-96 rounded-full overflow-hidden border-4 border-orange-500 shadow-2xl bg-white">
-                 <Image src="/ramesh.png" alt="Kathi Ramesh" fill className="object-cover" />
-              </div>
+
+            {/* IMAGE SIDE */}
+            <div className="mt-12 lg:mt-0 lg:col-span-5 flex justify-center relative">
+               {/* Background Circle Decoration */}
+               <div className="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+               <div className="absolute -bottom-8 -left-20 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+               
+               <div className="relative h-[400px] w-[350px] md:h-[500px] md:w-[450px]">
+                 {/* రమేష్ ఫోటో పక్కాగా కట్ చేసి (Remove bg) పెడితే ఇక్కడ అదిరిపోతుంది */}
+                 <Image 
+                    src="/ramesh.png" 
+                    alt="Kathi Ramesh" 
+                    fill 
+                    className="object-contain drop-shadow-2xl"
+                    priority
+                 />
+                 {/* Name Tag floating */}
+                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm px-6 py-2 rounded-lg shadow-lg border-l-4 border-orange-600 text-center w-max">
+                    <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">సర్పంచ్ అభ్యర్థి</p>
+                    <p className="text-2xl font-bold text-gray-900 font-[family-name:var(--font-sk)]">కత్తి రమేష్</p>
+                 </div>
+               </div>
             </div>
           </div>
         </div>
@@ -198,7 +250,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+    
       {/* --- TELANGANA UDYAMAM CAROUSEL --- */}
       <div id="about" className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4">
