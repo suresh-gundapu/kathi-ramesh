@@ -137,8 +137,8 @@ export default function Home() {
       </nav>
 
 {/* --- HERO SECTION (Updated with Simplified Content) --- */}
-      <div className="relative bg-orange-50 min-h-screen flex items-center pt-24 pb-12">
-        <div className="max-w-7xl mx-auto w-full px-4">
+  <div className="relative bg-orange-50 min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+          <div className="max-w-7xl mx-auto w-full px-4">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
             
             {/* TEXT SIDE */}
