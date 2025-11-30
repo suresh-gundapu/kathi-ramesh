@@ -250,7 +250,38 @@ export default function Home() {
           </div>
         </div>
       </div>
-    
+      {/* --- TAKSHANA KARTHAVYAM (IMMEDIATE PRIORITY) --- */}
+      <div className="bg-yellow-50 border-y-4 border-yellow-500 py-10">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="bg-white rounded-xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 border border-yellow-200">
+            
+            {/* ICON / IMAGE SIDE */}
+            <div className="flex-shrink-0">
+               <div className="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center border-4 border-yellow-500 animate-bounce">
+                  {/* Temple Icon */}
+                  <span className="text-5xl">🛕</span>
+               </div>
+            </div>
+
+            {/* TEXT SIDE */}
+            <div className="text-center md:text-left flex-1">
+               <div className="inline-block bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+                 గెలిచిన వెంటనే నా మొదటి పని
+               </div>
+               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 font-[family-name:var(--font-sk)]">
+                 తక్షణ కర్తవ్యం: గ్రామ దేవతల పునఃప్రతిష్టాపన
+               </h2>
+               <h3 className="text-xl text-orange-600 font-bold mb-4">
+                 - బొడ్డు రాయి ఏర్పాటు ఉత్సవం
+               </h3>
+               <p className="text-gray-600 text-lg leading-relaxed">
+                 మన ఊరి సంస్కృతిని, సంప్రదాయాన్ని కాపాడుకోవడమే నా ప్రథమ బాధ్యత. 
+                 అందరి సమక్షంలో, అత్యంత వైభవంగా ఈ ఉత్సవాన్ని జరిపిస్తానని మాటిస్తున్నాను.
+               </p>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* --- TELANGANA UDYAMAM CAROUSEL --- */}
       <div id="about" className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4">
