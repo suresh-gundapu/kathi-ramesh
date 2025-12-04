@@ -391,7 +391,7 @@ export default function Home() {
                 </p>
                    
                 <p className="text-orange-100 mt-2 text-lg">
-                    బ్యాలెట్ పేపర్ లో <span className="font-bold text-white underline">1వ నెంబర్</span>  పై మీ అమూల్యమైన ఓటు వేయండి.
+                    బ్యాలెట్ పేపర్ లో <span className="font-bold text-white underline">2వ నెంబర్</span>  పై మీ అమూల్యమైన ఓటు వేయండి.
                 </p>
                 <div className="mt-6 inline-block bg-orange-800 bg-opacity-50 px-6 py-2 rounded-lg border border-orange-400">
                     <p className="text-orange-100 text-lg">
