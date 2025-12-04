@@ -136,22 +136,34 @@ export default function Home() {
         )}
       </nav>
 
-{/* --- HERO SECTION (Updated with Simplified Content) --- */}
-  <div className="relative bg-orange-50 min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
-          <div className="max-w-7xl mx-auto w-full px-4">
+
+
+{/* --- HERO SECTION (Updated with Opacity Background) --- */}
+      <div className="relative bg-orange-50 min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+        
+        {/* BACKGROUND OPACITY IMAGE (బ్లెండింగ్ ఎఫెక్ట్ కోసం) */}
+        <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none z-0">
+             {/* ఇక్కడ అదే ఫోటోని పెద్దగా బ్యాక్‌గ్రౌండ్ లో వాడుతున్నాం */}
+             <Image 
+                src="/ramesh-namaste.png" 
+                alt="Background Effect" 
+                fill 
+                className="object-cover object-top"
+             />
+        </div>
+
+        <div className="max-w-7xl mx-auto w-full px-4 relative z-10">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
             
             {/* TEXT SIDE */}
             <div className="sm:text-center md:max-w-3xl md:mx-auto lg:col-span-7 lg:text-left">
-              {/* Badge */}
               <div className="inline-flex items-center px-3 py-1 rounded-full border border-orange-200 bg-orange-100 text-orange-800 text-sm font-medium mb-4">
-                 <span>✊ మార్పు మనతోనే మొదలవ్వాలి</span>
+                 <span>✊ మాదన్నపేట గ్రామ ప్రజలు బలపరిచిన స్వతంత్ర అభ్యర్థి</span>
               </div>
-
-              {/* Main Headline */}
+            {/* Main Headline */}
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl font-[family-name:var(--font-sk)] leading-tight">
                 మన ఊరి అభివృద్ధి కోసం
-<br/>
+                <br/>
                 <span className="text-orange-600">పునాది బలంగా వేసుకుందాం !</span>
               </h1>
 
@@ -160,8 +172,7 @@ export default function Home() {
                 "నా చిన్నతనం నుండి పెరిగింది, నా జీవితం గడిచింది అంతా ఈ మాదన్నపేటలోనే. ఉండేది ఇక్కడే.. ఎప్పటికీ మీతోనే! <br/>
                 మీలో ఒకడిగా, ఇక్కడి సమస్యలపై పూర్తి అవగాహనతో మీ ముందుకు వస్తున్నా."
               </p>
-
-              {/* Key Highlights (Bullet Points) */}
+     {/* Key Highlights (Bullet Points) */}
               <div className="mt-6 bg-white p-4 rounded-xl shadow-sm border border-orange-100">
                 <ul className="space-y-3 text-left">
                     <li className="flex items-start">
@@ -178,8 +189,6 @@ export default function Home() {
                     </li>
                 </ul>
               </div>
-
-              {/* CTA Buttons */}
               <div className="mt-8 flex gap-4 justify-center lg:justify-start">
                 <Link href="/manifesto" className="px-8 py-3 border border-transparent text-base font-bold rounded-md text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
                   నా పూర్తి మేనిఫెస్టో చూడండి
@@ -190,24 +199,23 @@ export default function Home() {
               </div>
             </div>
 
-            {/* IMAGE SIDE */}
+            {/* MAIN IMAGE SIDE (Right Side Photo) */}
             <div className="mt-12 lg:mt-0 lg:col-span-5 flex justify-center relative">
-               {/* Background Circle Decoration */}
-               <div className="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-               <div className="absolute -bottom-8 -left-20 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+               {/* Decorative Circle */}
+               <div className="absolute top-10 right-10 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
                
-               <div className="relative h-[400px] w-[350px] md:h-[500px] md:w-[450px]">
-                 {/* రమేష్ ఫోటో పక్కాగా కట్ చేసి (Remove bg) పెడితే ఇక్కడ అదిరిపోతుంది */}
+               <div className="relative h-[450px] w-[350px] md:h-[550px] md:w-[450px]">
+                 {/* ఇది మెయిన్ ఫోటో - బ్యాక్‌గ్రౌండ్ లేనిది పెట్టాలి */}
                  <Image 
-                    src="/ramesh.png" 
+                    src="/ramesh-namaste.png" 
                     alt="Kathi Ramesh" 
                     fill 
                     className="object-contain drop-shadow-2xl"
                     priority
                  />
-                 {/* Name Tag floating */}
+                 {/* Name Tag */}
                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm px-6 py-2 rounded-lg shadow-lg border-l-4 border-orange-600 text-center w-max">
-                    <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">సర్పంచ్ అభ్యర్థి</p>
+                    <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">స్వతంత్ర సర్పంచ్ అభ్యర్థి</p>
                     <p className="text-2xl font-bold text-gray-900 font-[family-name:var(--font-sk)]">కత్తి రమేష్</p>
                  </div>
                </div>
@@ -215,6 +223,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+
+
+
  {/* --- MANIFESTO --- */}
       <div id="manifesto" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -342,9 +355,11 @@ export default function Home() {
            </div>
         </div>
       </div>
-{/* --- ELECTION SYMBOL SECTION --- */}
-      <div className="bg-orange-600 py-8 relative overflow-hidden">
-        {/* Background decorative pattern */}
+
+
+{/* --- ELECTION SYMBOL SECTION (Updated) --- */}
+      <div className="bg-orange-600 py-12 relative overflow-hidden">
+        {/* Pattern styling */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
             <svg viewBox="0 0 100 100" fill="white">
                 <path d="M0 100 C 20 0 50 0 100 100 Z" />
@@ -352,33 +367,44 @@ export default function Home() {
         </div>
 
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 className="text-white text-xl md:text-2xl font-bold mb-4 font-[family-name:var(--font-sk)]">
-                రాబోయే ఎన్నికల్లో మన గుర్తు...
+            <h2 className="text-orange-100 text-xl md:text-2xl font-bold mb-6 font-[family-name:var(--font-sk)]">
+                మాదన్నపేట గ్రామ ప్రజలు బలపరిచిన స్వతంత్ర సర్పంచ్ అభ్యర్థి
             </h2>
             
-            <div className="bg-white rounded-full p-6 inline-block shadow-2xl animate-pulse">
-                {/* రేపు గుర్తు వచ్చాక ఇక్కడ ఇమేజ్ పెట్టు. 
-                   ప్రస్తుతానికి ఒక Placeholder Icon పెడుతున్నా.
-                   Image example: <Image src="/symbol.png" width={80} height={80} alt="Symbol" />
-                */}
-                <div className="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center bg-gray-100 rounded-full border-4 border-orange-500">
-                    {/* గుర్తు ఇమేజ్ లేనప్పుడు కనిపించే టెక్స్ట్ */}
-                    <span className="text-4xl">❓</span> 
-                    {/* గుర్తు వచ్చాక పైన span తీసేసి కింద Image వాడు */}
-                    {/* <Image src="/symbol.png" alt="Election Symbol" width={100} height={100} /> */}
+            <div className="bg-white rounded-3xl p-8 inline-block shadow-2xl transform hover:scale-105 transition duration-300">
+                <div className="flex flex-col items-center">
+                    {/* కత్తెర ఇమేజ్ ప్లేస్ హోల్డర్ - నీ దగ్గర symbol.png ఉంటే కింద కామెంట్ తీసేయ్ */}
+                     <Image src="/symbol.png" width={150} height={150} alt="Kathera" /> 
+                    
+                    {/* ఇమేజ్ లేకపోతే టెక్స్ట్ ఐకాన్ చూపిస్తుంది */}
+                    <div className="text-8xl mb-2"></div> 
+                    
+                    <h3 className="text-4xl md:text-6xl font-extrabold text-orange-600 tracking-wider font-[family-name:var(--font-sk)]">
+                       కత్తెర
+                    </h3>
                 </div>
             </div>
 
-            <div className="mt-4">
-                <h3 className="text-3xl md:text-5xl font-extrabold text-white tracking-wider font-[family-name:var(--font-sk)] drop-shadow-md">
-                   ""
-                </h3>
-                <p className="text-orange-100 mt-2 text-lg">
-                    బ్యాలెట్ పేపర్ లో <span className="font-bold text-white underline">వ నెంబర్</span>  పై మీ అమూల్యమైన ఓటు వేయండి.
+            <div className="mt-8">
+                <p className="text-white text-2xl md:text-3xl font-bold mb-2">
+                    మన గుర్తు: <span className="text-yellow-300 ">కత్తెర (Scissors)</span>
                 </p>
+                   
+                <p className="text-orange-100 mt-2 text-lg">
+                    బ్యాలెట్ పేపర్ లో <span className="font-bold text-white underline">1వ నెంబర్</span>  పై మీ అమూల్యమైన ఓటు వేయండి.
+                </p>
+                <div className="mt-6 inline-block bg-orange-800 bg-opacity-50 px-6 py-2 rounded-lg border border-orange-400">
+                    <p className="text-orange-100 text-lg">
+                        పోలింగ్ తేదీ: <span className="text-white font-bold text-xl">11-12-2025</span> (గురువారం)
+                    </p>
+                    <p className="text-orange-200 text-sm mt-1">
+                        ఉదయం 7:00 నుండి మధ్యాహ్నం 1:00 గంటల వరకు
+                    </p>
+                </div>
             </div>
         </div>
       </div>
+      
        {/* FOOTER */}
        <footer className="bg-gray-800 text-white py-8 text-center">
           <p className="text-xl font-bold font-[family-name:var(--font-sk)]">ఆదరించి ఆశీర్వదించండి</p>
