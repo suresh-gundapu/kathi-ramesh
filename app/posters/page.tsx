@@ -9,19 +9,18 @@ const skFont = Sree_Krushnadevaraya({
 
 export default function PostersPage() {
   return (
-    <div className={`min-h-screen bg-gray-900 p-4 md:p-8 font-sans flex flex-col items-center ${skFont.className}`}>
-      <h1 className="text-white text-3xl mb-2 font-sans text-center">Campaign Posters (Total 18)</h1>
-      <p className="text-gray-400 mb-8 font-sans text-center">Set 1 (Manifesto) & Set 2 (Sentiment). Take Screenshots!</p>
-      
-      {/* GRID CONTAINER */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+    // FIX: px-0 on mobile to fit 360px poster perfectly without scrolling
+    <div className={`min-h-screen bg-gray-900 py-8 px-0 md:p-8 font-sans flex flex-col items-center overflow-x-hidden ${skFont.className}`}>
+   
+      {/* GRID CONTAINER: Added justify-items-center to center posters perfectly */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 w-full justify-items-center">
         
         {/* ============================================================
              SET 1: MANIFESTO & PROMISES (Original 9)
            ============================================================ */}
         
         {/* 1. MAIN PROMISE (Yellow/Orange) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-b from-orange-600 via-yellow-400 to-orange-700 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-b from-orange-600 via-yellow-400 to-orange-700 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="pt-8 text-center relative z-10">
              <div className="inline-block bg-white text-orange-800 px-4 py-1 rounded-full font-bold text-xs mb-2 shadow-md uppercase">
                 మాదన్నపేట స్వతంత్ర అభ్యర్థి
@@ -53,7 +52,7 @@ export default function PostersPage() {
         </div>
 
         {/* 2. EMOTIONAL (Red) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-t from-black via-red-800 to-red-600 relative overflow-hidden shadow-2xl border-[4px] border-yellow-500 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-t from-black via-red-800 to-red-600 relative overflow-hidden shadow-2xl border-[4px] border-yellow-500 rounded-xl flex flex-col shrink-0">
            <div className="pt-8 px-4 text-center relative z-10">
              <h1 className="text-5xl font-extrabold text-white mb-2 drop-shadow-lg leading-tight">
                మాదన్నపేట ప్రజలే<br/><span className="text-yellow-400 text-6xl">నా బలం</span>
@@ -75,7 +74,7 @@ export default function PostersPage() {
         </div>
 
         {/* 3. VOTING (Blue) */}
-        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[4px] border-blue-700 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[4px] border-blue-700 rounded-xl flex flex-col shrink-0">
            <div className="bg-blue-800 py-4 text-center rounded-b-[30px] shadow-lg mb-4">
              <h2 className="text-yellow-300 text-lg font-bold">మాదన్నపేట అభివృద్ధి ప్రదాత</h2>
              <h1 className="text-white text-3xl font-extrabold">శ్రీ కత్తి రమేష్ గారి</h1>
@@ -103,7 +102,7 @@ export default function PostersPage() {
         </div>
 
         {/* 4. SANITATION (Green) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-br from-green-600 to-teal-800 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-br from-green-600 to-teal-800 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-white text-center relative z-10">
               <h2 className="text-yellow-300 text-lg font-bold bg-green-900/50 inline-block px-3 py-1 rounded-full mb-2">స్వచ్ఛ మాదన్నపేట</h2>
               <h1 className="text-4xl font-extrabold leading-tight">పచ్చని గ్రామం<br/>పరిశుభ్రమైన గ్రామం</h1>
@@ -127,7 +126,7 @@ export default function PostersPage() {
         </div>
 
         {/* 5. TEMPLES (Purple) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-b from-purple-900 to-indigo-900 relative overflow-hidden shadow-2xl border-[4px] border-pink-300 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-b from-purple-900 to-indigo-900 relative overflow-hidden shadow-2xl border-[4px] border-pink-300 rounded-xl flex flex-col shrink-0">
            <div className="pt-8 px-4 text-center relative z-10">
               <h2 className="text-pink-300 text-lg font-bold uppercase tracking-wider">మన సంస్కృతి - మన బాధ్యత</h2>
               <h1 className="text-3xl font-extrabold text-white mt-2 leading-tight">ఆలయాల అభివృద్ధి<br/>స్వర్గ రధం ఏర్పాటు</h1>
@@ -154,7 +153,7 @@ export default function PostersPage() {
         </div>
 
         {/* 6. INFRASTRUCTURE (Teal/Cyan) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-br from-cyan-600 to-blue-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-br from-cyan-600 to-blue-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-white text-center relative z-10">
               <h1 className="text-3xl font-extrabold leading-tight">మౌలిక వసతుల్లో<br/><span className="text-yellow-300">మహర్దశ</span></h1>
            </div>
@@ -179,7 +178,7 @@ export default function PostersPage() {
         </div>
 
         {/* 7. YOUTH (Yellow) */}
-        <div className="w-[360px] h-[640px] bg-yellow-400 relative overflow-hidden shadow-2xl border-[4px] border-orange-600 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-yellow-400 relative overflow-hidden shadow-2xl border-[4px] border-orange-600 rounded-xl flex flex-col shrink-0">
            <div className="absolute top-0 right-0 w-40 h-40 bg-orange-500 rounded-bl-full z-0"></div>
            <div className="p-6 relative z-10">
               <h2 className="text-orange-900 text-lg font-bold uppercase">యువశక్తి - మన ప్రగతి</h2>
@@ -204,7 +203,7 @@ export default function PostersPage() {
         </div>
 
         {/* 8. TRANSPARENCY (Magenta/Red) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-br from-pink-700 to-red-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-br from-pink-700 to-red-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-center text-white relative z-10">
               <h1 className="text-3xl font-extrabold">అవినీతి లేని పాలన<br/><span className="text-yellow-300">పారదర్శకత</span></h1>
            </div>
@@ -229,7 +228,7 @@ export default function PostersPage() {
         </div>
 
         {/* 9. VICTORY (White/Red) */}
-        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-orange-600 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-orange-600 rounded-xl flex flex-col shrink-0">
            <div className="bg-orange-600 p-4 text-center">
                <h1 className="text-white text-3xl font-extrabold">ఒక్క అవకాశం ఇవ్వండి!</h1>
            </div>
@@ -263,7 +262,7 @@ export default function PostersPage() {
            ============================================================ */}
 
         {/* 10. RESILIENCE (Black/Gold) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden shadow-2xl border-[4px] border-yellow-600 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden shadow-2xl border-[4px] border-yellow-600 rounded-xl flex flex-col shrink-0">
            <div className="pt-10 px-4 text-center relative z-10">
              <h1 className="text-4xl font-extrabold text-white leading-tight">గతంలో ఓడిపోయా..<br/><span className="text-red-500 text-5xl">కానీ పారిపోలేదు!</span></h1>
            </div>
@@ -280,7 +279,7 @@ export default function PostersPage() {
         </div>
 
         {/* 11. UDYAMAM (Pink) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-br from-pink-700 to-purple-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-br from-pink-700 to-purple-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')]"></div>
            <div className="pt-8 px-4 text-center relative z-10">
              <div className="inline-block bg-white text-pink-800 px-3 py-1 rounded mb-2 font-bold text-sm">జై తెలంగాణ - జై మాదన్నపేట</div>
@@ -305,7 +304,7 @@ export default function PostersPage() {
         </div>
 
         {/* 12. EXPERIENCE (Slate) */}
-        <div className="w-[360px] h-[640px] bg-slate-800 relative overflow-hidden shadow-2xl border-[4px] border-blue-400 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-slate-800 relative overflow-hidden shadow-2xl border-[4px] border-blue-400 rounded-xl flex flex-col shrink-0">
            <div className="pt-8 px-4 text-center relative z-10">
              <h1 className="text-3xl font-extrabold text-white leading-tight">20 ఏళ్ల అనుభవం<br/><span className="text-blue-400 text-4xl">అపారమైన పట్టు</span></h1>
            </div>
@@ -328,7 +327,7 @@ export default function PostersPage() {
         </div>
 
         {/* 13. WARNING (Red/White) */}
-        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-red-600 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-red-600 rounded-xl flex flex-col shrink-0">
            <div className="bg-red-600 p-4 text-center">
               <h1 className="text-white text-3xl font-extrabold">ఆలోచించండి!</h1>
            </div>
@@ -354,7 +353,7 @@ export default function PostersPage() {
         </div>
 
         {/* 14. ACCESSIBILITY (Warm Orange) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-br from-orange-500 to-red-600 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-br from-orange-500 to-red-600 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-white text-center relative z-10">
               <h1 className="text-4xl font-extrabold leading-tight">పిలిస్తే పలికే మనిషి<br/><span className="text-yellow-200">అందరి మనిషి</span></h1>
            </div>
@@ -376,7 +375,7 @@ export default function PostersPage() {
         </div>
 
         {/* 15. INCLUSIVE (Multi-Color) */}
-        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[4px] border-orange-500 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[4px] border-orange-500 rounded-xl flex flex-col shrink-0">
            <div className="bg-orange-500 h-32 rounded-b-[60px] pt-6 text-center relative z-0">
                <h1 className="text-white text-2xl font-bold">కులమతాలకు అతీతంగా..</h1>
            </div>
@@ -405,7 +404,7 @@ export default function PostersPage() {
         </div>
 
         {/* 16. FARMERS (Green) */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-b from-green-700 to-green-900 relative overflow-hidden shadow-2xl border-[4px] border-yellow-400 rounded-xl flex flex-col">
+        <div className="w-[360px] h-[640px] bg-gradient-to-b from-green-700 to-green-900 relative overflow-hidden shadow-2xl border-[4px] border-yellow-400 rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-center relative z-10">
               <h1 className="text-yellow-300 text-3xl font-extrabold leading-tight">రైతుకు భరోసా<br/>యువతకు బాట</h1>
            </div>
@@ -425,52 +424,52 @@ export default function PostersPage() {
            <div className="absolute bottom-4 left-4 bg-yellow-400 text-green-900 px-6 py-2 rounded-full font-bold shadow-lg z-20">జై కిసాన్ - జై జవాన్</div>
         </div>
 
-        {/* 17. VISIONARY (Purple/Gold) - FIXED */}
-        <div className="w-[360px] h-[640px] bg-gradient-to-tr from-purple-800 to-indigo-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col">
+        {/* 17. VISIONARY (Purple/Gold) - ADJUSTED */}
+        <div className="w-[360px] h-[640px] bg-gradient-to-tr from-purple-800 to-indigo-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-center relative z-10">
-              <h1 className="text-white text-3xl font-extrabold leading-tight">
-                గ్రామ ప్రగతికి<br/><span className="text-yellow-300">కొత్త విజన్</span>
-              </h1>
+              <h1 className="text-white text-3xl font-extrabold leading-tight">గ్రామ ప్రగతికి<br/><span className="text-yellow-300">కొత్త విజన్</span></h1>
            </div>
-
            <div className="px-6 relative z-10 text-center">
-               <p className="text-purple-200 text-lg leading-relaxed">
-                   "కేవలం రోడ్లు వేయడమే కాదు.. మన ఊరిని అన్ని రంగాల్లో ఆదర్శ గ్రామంగా తీర్చిదిద్దాలన్నదే నా తపన."
-               </p>
-               <div className="mt-4 inline-block border-2 border-yellow-400 text-yellow-400 px-4 py-1 rounded uppercase font-bold text-sm">
-                   Future Ready Village
-               </div>
+               <p className="text-purple-200 text-lg leading-relaxed">"కేవలం రోడ్లు వేయడమే కాదు.. మన ఊరిని అన్ని రంగాల్లో ఆదర్శ గ్రామంగా తీర్చిదిద్దాలన్నదే నా తపన."</p>
+               <div className="mt-4 inline-block border-2 border-yellow-400 text-yellow-400 px-4 py-1 rounded uppercase font-bold text-sm">Future Ready Village</div>
            </div>
-
-        <div className="absolute top-[45%] right-6 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-xl border-4 border-green-500 z-10">
-               <Image src="/symbol.png" width={70} height={70} alt="Symbol" className="object-contain" />
+           <div className="absolute top-[42%] left-1/2 transform -translate-x-1/2 w-24 h-24 bg-white rounded-full border-4 border-purple-500 flex items-center justify-center shadow-2xl z-20">
+               <Image src="/symbol.png" width={80} height={80} alt="Symbol" className="object-contain" />
            </div>
-           <div className="mt-auto relative w-full h-[320px]">
+           <div className="mt-auto relative w-full h-[340px] z-10">
                <Image src="/ramesh-namaste.png" alt="Ramesh" fill className="object-contain object-bottom" />
            </div>
-           
            <div className="absolute bottom-4 w-full text-center z-20">
                <p className="text-2xl font-bold text-white drop-shadow-md">కత్తి రమేష్</p>
            </div>
         </div>
+
         {/* 18. FINAL APPEAL (White/Red) */}
-        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-red-600 rounded-xl flex flex-col">
-           <div className="bg-red-600 p-4 text-center">
-               <h1 className="text-white text-3xl font-extrabold">ఒక్క అవకాశం!</h1>
+        <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-orange-600 rounded-xl flex flex-col shrink-0">
+           <div className="bg-orange-600 p-4 text-center">
+               <h1 className="text-white text-3xl font-extrabold">ఒక్క అవకాశం ఇవ్వండి!</h1>
            </div>
-           <div className="flex-1 flex flex-col items-center pt-8 px-4 text-center relative z-10">
-               <p className="text-gray-900 text-2xl font-bold">ఈసారి తప్పక</p>
-               <p className="text-red-600 text-4xl font-extrabold mt-1">గెలిపించండి</p>
+           <div className="flex-1 flex flex-col items-center pt-6 px-4 text-center relative z-10">
+               <p className="text-gray-900 text-2xl font-bold mt-1">మాదన్నపేట అభివృద్ధి కోసం</p>
                <div className="my-4 relative">
-                   <div className="w-48 h-48 bg-red-50 rounded-full border-4 border-red-200 flex items-center justify-center animate-pulse">
+                   <div className="w-48 h-48 bg-orange-50 rounded-full border-4 border-orange-200 flex items-center justify-center animate-pulse">
                        <Image src="/symbol.png" width={150} height={150} alt="Symbol" className="object-contain" />
                    </div>
+                   <div className="absolute -bottom-2 bg-red-600 text-white px-4 py-1 rounded-full shadow-lg font-bold text-lg left-1/2 transform -translate-x-1/2 w-max">
+                       కత్తెర గుర్తు
+                   </div>
                </div>
-               <p className="text-gray-500 font-bold text-lg">నిరంతరం మీ సేవలో ఉండే</p>
-               <p className="text-3xl font-extrabold text-gray-900">కత్తి రమేష్</p>
+               <p className="text-3xl font-extrabold text-orange-700 mt-2">కత్తి రమేష్ గారికి</p>
+               <p className="text-gray-500 font-bold text-lg">ఓటు వేసి గెలిపించండి</p>
            </div>
-           <div className="bg-gray-900 text-white p-3 text-center z-20">
-               <p className="text-xl font-bold text-yellow-400">పోలింగ్ తేదీ: 11 Dec 2025</p>
+           <div className="bg-gray-900 text-white p-3 flex justify-between items-center z-20">
+               <div className="text-left">
+                   <p className="text-xs text-gray-400 uppercase">Polling Date</p>
+                   <p className="text-xl font-bold text-yellow-400">11 Dec 2025</p>
+               </div>
+               <div className="text-right">
+                   <p className="text-lg font-bold">స్వతంత్ర అభ్యర్థి</p>
+               </div>
            </div>
         </div>
 
