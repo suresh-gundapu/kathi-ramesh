@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // Link import చేశాను
 import { Sree_Krushnadevaraya } from "next/font/google";
 
 const skFont = Sree_Krushnadevaraya({ 
@@ -9,17 +10,27 @@ const skFont = Sree_Krushnadevaraya({
 
 export default function PostersPage() {
   return (
-    // FIX: px-0 on mobile to fit 360px poster perfectly without scrolling
     <div className={`min-h-screen bg-gray-900 py-8 px-0 md:p-8 font-sans flex flex-col items-center overflow-x-hidden ${skFont.className}`}>
-   
-      {/* GRID CONTAINER: Added justify-items-center to center posters perfectly */}
+      
+      {/* --- BACK BUTTON (NEW) --- */}
+      <div className="w-full max-w-6xl px-4 mb-6 flex justify-start">
+        <Link 
+            href="/" 
+            className="flex items-center gap-2 text-white border border-white/30 px-5 py-2 rounded-full hover:bg-white/10 transition font-sans font-bold text-sm"
+        >
+            <span>←</span> వెనక్కి వెళ్ళు (Home)
+        </Link>
+      </div>
+
+  
+      {/* GRID CONTAINER */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 w-full justify-items-center">
         
         {/* ============================================================
              SET 1: MANIFESTO & PROMISES (Original 9)
            ============================================================ */}
         
-        {/* 1. MAIN PROMISE (Yellow/Orange) */}
+        {/* 1. MAIN PROMISE */}
         <div className="w-[360px] h-[640px] bg-gradient-to-b from-orange-600 via-yellow-400 to-orange-700 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="pt-8 text-center relative z-10">
              <div className="inline-block bg-white text-orange-800 px-4 py-1 rounded-full font-bold text-xs mb-2 shadow-md uppercase">
@@ -51,7 +62,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 2. EMOTIONAL (Red) */}
+        {/* 2. EMOTIONAL */}
         <div className="w-[360px] h-[640px] bg-gradient-to-t from-black via-red-800 to-red-600 relative overflow-hidden shadow-2xl border-[4px] border-yellow-500 rounded-xl flex flex-col shrink-0">
            <div className="pt-8 px-4 text-center relative z-10">
              <h1 className="text-5xl font-extrabold text-white mb-2 drop-shadow-lg leading-tight">
@@ -73,7 +84,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 3. VOTING (Blue) */}
+        {/* 3. VOTING */}
         <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[4px] border-blue-700 rounded-xl flex flex-col shrink-0">
            <div className="bg-blue-800 py-4 text-center rounded-b-[30px] shadow-lg mb-4">
              <h2 className="text-yellow-300 text-lg font-bold">మాదన్నపేట అభివృద్ధి ప్రదాత</h2>
@@ -101,7 +112,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 4. SANITATION (Green) */}
+        {/* 4. SANITATION */}
         <div className="w-[360px] h-[640px] bg-gradient-to-br from-green-600 to-teal-800 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-white text-center relative z-10">
               <h2 className="text-yellow-300 text-lg font-bold bg-green-900/50 inline-block px-3 py-1 rounded-full mb-2">స్వచ్ఛ మాదన్నపేట</h2>
@@ -125,7 +136,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 5. TEMPLES (Purple) */}
+        {/* 5. TEMPLES */}
         <div className="w-[360px] h-[640px] bg-gradient-to-b from-purple-900 to-indigo-900 relative overflow-hidden shadow-2xl border-[4px] border-pink-300 rounded-xl flex flex-col shrink-0">
            <div className="pt-8 px-4 text-center relative z-10">
               <h2 className="text-pink-300 text-lg font-bold uppercase tracking-wider">మన సంస్కృతి - మన బాధ్యత</h2>
@@ -152,7 +163,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 6. INFRASTRUCTURE (Teal/Cyan) */}
+        {/* 6. INFRASTRUCTURE */}
         <div className="w-[360px] h-[640px] bg-gradient-to-br from-cyan-600 to-blue-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-white text-center relative z-10">
               <h1 className="text-3xl font-extrabold leading-tight">మౌలిక వసతుల్లో<br/><span className="text-yellow-300">మహర్దశ</span></h1>
@@ -177,7 +188,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 7. YOUTH (Yellow) */}
+        {/* 7. YOUTH */}
         <div className="w-[360px] h-[640px] bg-yellow-400 relative overflow-hidden shadow-2xl border-[4px] border-orange-600 rounded-xl flex flex-col shrink-0">
            <div className="absolute top-0 right-0 w-40 h-40 bg-orange-500 rounded-bl-full z-0"></div>
            <div className="p-6 relative z-10">
@@ -202,7 +213,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 8. TRANSPARENCY (Magenta/Red) */}
+        {/* 8. TRANSPARENCY */}
         <div className="w-[360px] h-[640px] bg-gradient-to-br from-pink-700 to-red-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-center text-white relative z-10">
               <h1 className="text-3xl font-extrabold">అవినీతి లేని పాలన<br/><span className="text-yellow-300">పారదర్శకత</span></h1>
@@ -227,7 +238,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 9. VICTORY (White/Red) */}
+        {/* 9. VICTORY */}
         <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-orange-600 rounded-xl flex flex-col shrink-0">
            <div className="bg-orange-600 p-4 text-center">
                <h1 className="text-white text-3xl font-extrabold">ఒక్క అవకాశం ఇవ్వండి!</h1>
@@ -261,7 +272,7 @@ export default function PostersPage() {
              SET 2: SENTIMENT, VISION & EXPERIENCE (New 9)
            ============================================================ */}
 
-        {/* 10. RESILIENCE (Black/Gold) */}
+        {/* 10. RESILIENCE */}
         <div className="w-[360px] h-[640px] bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden shadow-2xl border-[4px] border-yellow-600 rounded-xl flex flex-col shrink-0">
            <div className="pt-10 px-4 text-center relative z-10">
              <h1 className="text-4xl font-extrabold text-white leading-tight">గతంలో ఓడిపోయా..<br/><span className="text-red-500 text-5xl">కానీ పారిపోలేదు!</span></h1>
@@ -278,7 +289,7 @@ export default function PostersPage() {
            <div className="absolute bottom-4 left-4 bg-yellow-600 text-black px-4 py-2 rounded font-bold z-20">కత్తి రమేష్ - పోరాట యోధుడు</div>
         </div>
 
-        {/* 11. UDYAMAM (Pink) */}
+        {/* 11. UDYAMAM */}
         <div className="w-[360px] h-[640px] bg-gradient-to-br from-pink-700 to-purple-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')]"></div>
            <div className="pt-8 px-4 text-center relative z-10">
@@ -303,7 +314,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 12. EXPERIENCE (Slate) */}
+        {/* 12. EXPERIENCE */}
         <div className="w-[360px] h-[640px] bg-slate-800 relative overflow-hidden shadow-2xl border-[4px] border-blue-400 rounded-xl flex flex-col shrink-0">
            <div className="pt-8 px-4 text-center relative z-10">
              <h1 className="text-3xl font-extrabold text-white leading-tight">20 ఏళ్ల అనుభవం<br/><span className="text-blue-400 text-4xl">అపారమైన పట్టు</span></h1>
@@ -326,7 +337,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 13. WARNING (Red/White) */}
+        {/* 13. WARNING */}
         <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-red-600 rounded-xl flex flex-col shrink-0">
            <div className="bg-red-600 p-4 text-center">
               <h1 className="text-white text-3xl font-extrabold">ఆలోచించండి!</h1>
@@ -352,7 +363,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 14. ACCESSIBILITY (Warm Orange) */}
+        {/* 14. ACCESSIBILITY */}
         <div className="w-[360px] h-[640px] bg-gradient-to-br from-orange-500 to-red-600 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-white text-center relative z-10">
               <h1 className="text-4xl font-extrabold leading-tight">పిలిస్తే పలికే మనిషి<br/><span className="text-yellow-200">అందరి మనిషి</span></h1>
@@ -374,7 +385,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 15. INCLUSIVE (Multi-Color) */}
+        {/* 15. INCLUSIVE */}
         <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[4px] border-orange-500 rounded-xl flex flex-col shrink-0">
            <div className="bg-orange-500 h-32 rounded-b-[60px] pt-6 text-center relative z-0">
                <h1 className="text-white text-2xl font-bold">కులమతాలకు అతీతంగా..</h1>
@@ -403,7 +414,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 16. FARMERS (Green) */}
+        {/* 16. FARMERS */}
         <div className="w-[360px] h-[640px] bg-gradient-to-b from-green-700 to-green-900 relative overflow-hidden shadow-2xl border-[4px] border-yellow-400 rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-center relative z-10">
               <h1 className="text-yellow-300 text-3xl font-extrabold leading-tight">రైతుకు భరోసా<br/>యువతకు బాట</h1>
@@ -424,7 +435,7 @@ export default function PostersPage() {
            <div className="absolute bottom-4 left-4 bg-yellow-400 text-green-900 px-6 py-2 rounded-full font-bold shadow-lg z-20">జై కిసాన్ - జై జవాన్</div>
         </div>
 
-        {/* 17. VISIONARY (Purple/Gold) - ADJUSTED */}
+        {/* 17. VISIONARY - ADJUSTED */}
         <div className="w-[360px] h-[640px] bg-gradient-to-tr from-purple-800 to-indigo-900 relative overflow-hidden shadow-2xl border-[4px] border-white rounded-xl flex flex-col shrink-0">
            <div className="p-6 text-center relative z-10">
               <h1 className="text-white text-3xl font-extrabold leading-tight">గ్రామ ప్రగతికి<br/><span className="text-yellow-300">కొత్త విజన్</span></h1>
@@ -433,10 +444,10 @@ export default function PostersPage() {
                <p className="text-purple-200 text-lg leading-relaxed">"కేవలం రోడ్లు వేయడమే కాదు.. మన ఊరిని అన్ని రంగాల్లో ఆదర్శ గ్రామంగా తీర్చిదిద్దాలన్నదే నా తపన."</p>
                <div className="mt-4 inline-block border-2 border-yellow-400 text-yellow-400 px-4 py-1 rounded uppercase font-bold text-sm">Future Ready Village</div>
            </div>
-           <div className="absolute top-[42%] left-1/2 transform -translate-x-1/2 w-24 h-24 bg-white rounded-full border-4 border-purple-500 flex items-center justify-center shadow-2xl z-20">
-               <Image src="/symbol.png" width={80} height={80} alt="Symbol" className="object-contain" />
+      <div className="absolute top-[45%] right-6 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-xl border-4 border-green-500 z-10">
+               <Image src="/symbol.png" width={70} height={70} alt="Symbol" className="object-contain" />
            </div>
-           <div className="mt-auto relative w-full h-[340px] z-10">
+           <div className="mt-auto relative w-full h-[320px]">
                <Image src="/ramesh-namaste.png" alt="Ramesh" fill className="object-contain object-bottom" />
            </div>
            <div className="absolute bottom-4 w-full text-center z-20">
@@ -444,7 +455,7 @@ export default function PostersPage() {
            </div>
         </div>
 
-        {/* 18. FINAL APPEAL (White/Red) */}
+        {/* 18. FINAL APPEAL */}
         <div className="w-[360px] h-[640px] bg-white relative overflow-hidden shadow-2xl border-[8px] border-orange-600 rounded-xl flex flex-col shrink-0">
            <div className="bg-orange-600 p-4 text-center">
                <h1 className="text-white text-3xl font-extrabold">ఒక్క అవకాశం ఇవ్వండి!</h1>
@@ -474,6 +485,23 @@ export default function PostersPage() {
         </div>
 
       </div>
+      
+      {/* --- FOOTER (Added for Posters Page) --- */}
+      <footer className="w-full bg-gray-900 text-white py-8 text-center border-t border-gray-800 mt-auto">
+          <div className="max-w-7xl mx-auto px-4">
+              <p className="text-sm text-gray-500">
+                Designed & Developed by{" "}
+                <a 
+                  href="https://webtsite.vercel.app/about" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-orange-500 hover:text-orange-400 font-bold transition"
+                >
+                  SG
+                </a>
+              </p>
+          </div>
+      </footer>
     </div>
   );
 }
