@@ -294,7 +294,7 @@ export default function AnilPostersPage() {
                </div>
                
                <h2 className="text-black text-3xl font-extrabold">ఉంగరం గుర్తు</h2>
-               <p className="text-red-700 font-bold text-lg mt-1">2వ నెంబర్ పై ఓటు వేయండి</p>
+               <p className="text-red-700 font-bold text-lg mt-1">1వ నెంబర్ పై ఓటు వేయండి</p>
            </div>
 
            <div className="bg-red-700 text-white p-3 flex items-center justify-between">
