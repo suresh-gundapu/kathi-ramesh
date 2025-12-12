@@ -129,7 +129,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 transform hover:scale-105 transition">
-                  <p className="text-5xl font-extrabold text-yellow-400 mb-2 font-sans">1704</p>
+                  <p className="text-5xl font-extrabold text-yellow-400 mb-2 font-sans">170+</p>
                   <p className="text-xl text-white font-bold">ఓట్ల మెజారిటీ</p>
                </div>
                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 transform hover:scale-105 transition">
