@@ -197,9 +197,17 @@ export default function Home() {
                సర్పంచ్ లాగిన్ (Admin)
             </Link>
           </div>
-          <div className="mt-4 text-sm text-gray-600 font-sans">
-            Designed & Developed by <span className="text-green-500 font-bold">SG</span>
-          </div>
+          <p className="text-sm text-gray-600 flex items-center justify-center gap-2 font-sans">
+                Designed & Developed by 
+                <a 
+                  href="https://webtsite.vercel.app/about" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-orange-500 hover:text-orange-400 font-extrabold transition bg-gray-800 px-3 py-1 rounded-full text-xs"
+                >
+                  SG
+                </a>
+              </p>
       </footer>
     </div>
   );
