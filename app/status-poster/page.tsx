@@ -12,7 +12,7 @@ export default function InvitationPoster() {
      
 
       {/* ================= INVITATION POSTER (Fixed Head Visibility) ================= */}
-      <div className={`w-[380px] h-[740px] bg-gradient-to-b from-[#4a0404] via-[#8b0000] to-[#2e0202] relative overflow-hidden shadow-2xl border-[3px] border-[#ffd700] flex flex-col ${skFont.className}`}>
+      <div className={`w-[380px] h-[720px] bg-gradient-to-b from-[#4a0404] via-[#8b0000] to-[#2e0202] relative overflow-hidden shadow-2xl border-[3px] border-[#ffd700] flex flex-col ${skFont.className}`}>
         
         {/* --- BACKGROUND PATTERN --- */}
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] z-0"></div>
@@ -72,7 +72,7 @@ export default function InvitationPoster() {
                     src="/ramesh-new.png" 
                     alt="Kathi Ramesh" 
                     fill 
-                    className="object-contain object-center drop-shadow-[0_-5px_15px_rgba(0,0,0,0.6)] scale-100"
+                    className="object-contain object-center drop-shadow-[0_-5px_15px_rgba(0,0,0,0.6)] scale-90"
                     // Removed 'maskImage' from top, applied only slightly at very bottom if needed
                     // object-contain ensures the full head fits if crop is tight
                     // object-bottom aligns it to the bottom
@@ -111,7 +111,7 @@ export default function InvitationPoster() {
             </div>
             
             <div className="mt-1 pb-1">
-                <span className={`${ramaFont.className} text-xl font-bold text-white drop-shadow-md`}>
+                <span className={`${ramaFont.className} text-[18px] font-bold text-white drop-shadow-md`}>
                     స్వాగతం - సుస్వాగతం
                 </span>
             </div>
