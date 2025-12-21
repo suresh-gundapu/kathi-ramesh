@@ -12,7 +12,7 @@ export default function InvitationPoster() {
      
 
       {/* ================= INVITATION POSTER (Fixed Head Visibility) ================= */}
-      <div className={`w-[380px] h-[780px] bg-gradient-to-b from-[#4a0404] via-[#8b0000] to-[#2e0202] relative overflow-hidden shadow-2xl border-[3px] border-[#ffd700] flex flex-col ${skFont.className}`}>
+      <div className={`w-[380px] h-[740px] bg-gradient-to-b from-[#4a0404] via-[#8b0000] to-[#2e0202] relative overflow-hidden shadow-2xl border-[3px] border-[#ffd700] flex flex-col ${skFont.className}`}>
         
         {/* --- BACKGROUND PATTERN --- */}
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] z-0"></div>
@@ -67,7 +67,7 @@ export default function InvitationPoster() {
             
             {/* IMAGE CONTAINER */}
             {/* Changed styling to ensure head is visible and image is pushed down */}
-            <div className="relative w-[600px] h-[450px] z-10 translate-y-2"> 
+            <div className="relative w-[420px] h-[450px] z-10 translate-y-2"> 
                 <Image 
                     src="/ramesh-new.png" 
                     alt="Kathi Ramesh" 
