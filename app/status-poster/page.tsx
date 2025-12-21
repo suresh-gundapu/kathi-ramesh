@@ -46,7 +46,7 @@ export default function InvitationPoster() {
         {/* --- 2. TIME & VENUE BOXES --- */}
         <div className="relative z-10 flex justify-between px-4 mt-2 gap-3">
             <div className="border border-yellow-500/50 bg-black/20 rounded-lg p-1.5 w-1/2 text-center backdrop-blur-sm">
-                <p className="text-orange-300 text-[10px] font-bold">స్థలం:</p>
+                <p className="text-orange-300 text-[12px] font-bold">స్థలం:</p>
                 <p className="text-white text-xs leading-tight font-bold">
                     గ్రామ పంచాయతీ కార్యాలయం, <br/> మాదన్నపేట
                 </p>
@@ -60,19 +60,19 @@ export default function InvitationPoster() {
         </div>
 
         {/* --- 3. HERO IMAGE (Head Fully Visible Fix) --- */}
-        <div className="relative flex-1 w-full flex justify-center items-end overflow-hidden z-0 -mt-8">
+        <div className="relative flex-1 w-full flex justify-center items-end overflow-hidden z-0 -mt-4">
             
             {/* Aura Glow - Lowered */}
             <div className="absolute bottom-10 w-[260px] h-[260px] bg-orange-500 rounded-full blur-[70px] opacity-40"></div>
             
             {/* IMAGE CONTAINER */}
             {/* Changed styling to ensure head is visible and image is pushed down */}
-            <div className="relative w-[420px] h-[450px] z-10 translate-y-2"> 
+            <div className="relative w-[290px] h-[400px] z-10 translate-y-2"> 
                 <Image 
                     src="/ramesh-new.png" 
                     alt="Kathi Ramesh" 
                     fill 
-                    className="object-contain object-center drop-shadow-[0_-5px_15px_rgba(0,0,0,0.6)] scale-105"
+                    className="object-contain object-center drop-shadow-[0_-5px_15px_rgba(0,0,0,0.6)] scale-100"
                     // Removed 'maskImage' from top, applied only slightly at very bottom if needed
                     // object-contain ensures the full head fits if crop is tight
                     // object-bottom aligns it to the bottom
@@ -94,19 +94,19 @@ export default function InvitationPoster() {
                     </p>
                  </div>
             </div>
-             <p className="text-center text-yellow-200 text-[10px] font-bold mt-2 opacity-90">
+             <p className="text-center text-yellow-200 text-[12px] font-bold mt-2 opacity-90">
                  మరియు గ్రామపంచాయతీ పాలకవర్గం
              </p>
         </div>
 
         {/* --- 5. FOOTER CONTENT --- */}
         <div className="relative z-10 bg-black/50 px-3 py-3 text-center border-t border-white/10 backdrop-blur-md">
-            <p className="text-white text-[10px] leading-relaxed font-bold opacity-90 px-2">
+            <p className="text-white text-[14px] leading-relaxed font-bold opacity-90 px-2">
                 మా మీద నమ్మకంతో మమ్ములను ఆశీర్వదించి మాదన్నపేట గ్రామ సర్పంచ్ గా, ఉప సర్పంచ్ గా, వార్డు సభ్యులుగా ఎన్నుకున్న గ్రామ ప్రజలకు ధన్యవాదాలు. 
                 ఈ ప్రమాణస్వీకార మహోత్సవానికి ప్రజలందరూ అధిక సంఖ్యలో పాల్గొని జయప్రదం చేయగలరని కోరుతున్నాము.
             </p>
 
-            <div className="mt-2 text-yellow-400 text-[9px] font-bold border-t border-white/10 pt-2">
+            <div className="mt-2 text-yellow-400 text-[12px] font-bold border-t border-white/10 pt-2">
                 మిత్రులకు, శ్రేయోభిలాషులకు, అధికారులకు, అనధికారులకు, పాత్రికేయ మిత్రులకు...
             </div>
             
